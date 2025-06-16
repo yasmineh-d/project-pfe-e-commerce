@@ -1,0 +1,565 @@
+/* ======================================================= */
+/* === L'CODE MNEJME3: HOME.CSS + ABOUT.CSS === */
+/* ======================================================= */
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+}
+
+/* ========================
+       HEADER
+    ======================== */
+.top-bar {
+  background-color: #3771c8;
+  color: #fcd34d;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 8px 0;
+}
+
+.main-header {
+  background-color: #3771c8;
+  padding: 0 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1px;
+  flex-wrap: wrap;
+}
+
+.header-content {
+  background-color: #ffffff;
+  border-radius: 30px 0px 0px 0px;
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-left: 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo img {
+  max-height: 57px;
+  margin-left: 9px;
+  margin-top: -15px;
+  position: relative;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 115px; /* MODIFIED: Consistent with original home.css */
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  position: relative;
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li a.active {
+  color: #1e90ff;
+}
+
+.nav-menu ul li a.active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #000;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.icon-circle {
+  background-color: #f1f3f6;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.icon-circle i {
+  font-size: 1rem;
+  color: #000;
+}
+
+.icon-circle:hover {
+  background-color: #e0e7ff;
+}
+
+.signin-btn {
+  padding: 6px 16px;
+  border: 1px solid #3771c8;
+  color: #3771c8;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.signin-btn:hover {
+  background-color: #ffdd55;
+  color: #3771c8;
+}
+
+/* ======================================================= */
+/* === SECTION 1: ABOUT US (L'QDIMA) === */
+/* ======================================================= */
+.about-us-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0px 0;
+  overflow: hidden; /* bach maykherjch l'content 3la l'container */
+}
+
+.about-image-wrapper {
+  flex-basis: 60%;
+  border-radius: 0 25px 25px 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.about-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.main-text-column {
+  flex-basis: 55%;
+  margin-left: -120px;
+  position: relative;
+  z-index: 2;
+}
+
+.about-us-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  position: absolute;
+  top: -40px;
+  left: 240px;
+  z-index: 3;
+}
+
+.about-info-box {
+  background-color: #f0f0f0;
+  padding: 2rem;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+.about-info-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333333;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+.about-info-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* ======================================================= */
+/* === SECTION 2: OUR JOURNEY (JDIDA) === */
+/* ======================================================= */
+.our-journey-section {
+  padding: 80px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.journey-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 40px;
+}
+
+.journey-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.journey-text-container {
+  flex: 1 1 45%;
+}
+
+.journey-text-box {
+  background-color: #e9ecef;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.journey-text-box p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333333;
+  margin-bottom: 1.5rem;
+}
+
+.journey-text-box p:last-child {
+  margin-bottom: 0;
+}
+
+.journey-images-container {
+  flex: 1 1 55%;
+  position: relative;
+  min-height: 550px;
+}
+
+.journey-image {
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 5px solid white;
+}
+
+.journey-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.journey-image.img-1 {
+  width: 350px;
+  height: 350px;
+  top: 0;
+  left: 5%;
+  z-index: 3;
+}
+
+.journey-image.img-2 {
+  width: 380px;
+  height: 380px;
+  top: 100px;
+  right: 0;
+  z-index: 2;
+}
+
+.journey-image.img-3 {
+  width: 320px;
+  height: 320px;
+  bottom: 0;
+  left: 20%;
+  z-index: 1;
+}
+
+/* ========================
+       FOOTER
+    ======================== */
+.site-footer {
+  background-color: #3771c8;
+  color: #ffffff;
+  padding: 60px 0 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 160px;
+}
+
+.footer-column h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a,
+.footer-legal-links a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover,
+.footer-legal-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* ADDED: Styles for stacking contact icon links (WhatsApp, Gmail) */
+.footer-column .contact-icons a {
+  display: block; /* Makes each link take full width and stack vertically */
+  margin-bottom: 10px; /* Space between the links */
+}
+.footer-column .contact-icons a:last-child {
+  margin-bottom: 0; /* Remove margin from the last icon if only two */
+}
+
+/* MODIFIED: contact-icons img for hover effect and spacing handled by <a> */
+.contact-icons img {
+  width: 36px;
+  height: auto;
+  /* margin-bottom: 15px; -- REMOVED: Spacing is now on the <a> tag */
+  display: block; /* Ensures the image behaves as a block within its 'a' tag */
+  transition: transform 0.2s ease; /* For smooth scaling on hover */
+}
+
+/* ADDED: Hover effect for contact icons */
+.footer-column .contact-icons a:hover img {
+  transform: scale(1.15); /* Make icon bigger on hover */
+}
+
+/* MODIFIED: social-icons .social-icon for vertical stacking and hover */
+.social-icons .social-icon {
+  display: flex; /* MODIFIED: from inline-flex. Makes it block-level but keeps flex properties for centering icon */
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  margin-right: 0; /* MODIFIED: Removed right margin as they are stacked */
+  margin-bottom: 10px; /* MODIFIED: Adjusted for vertical spacing */
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.social-icons .social-icon:hover {
+  transform: scale(1.1); /* Existing hover effect preserved */
+}
+
+.facebook-bg {
+  background-color: #1877f2;
+}
+.twitter-bg {
+  background-color: #1da1f2;
+}
+.linkedin-bg {
+  background-color: #0a66c2;
+}
+.instagram-bg {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+.footer-divider {
+  border: none;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 0 20px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 0.85rem;
+  color: #d1d5db;
+}
+
+.footer-legal-links span {
+  margin: 0 10px;
+}
+
+/* ======================================================= */
+/* === RESPONSIVE DESIGN (L'KOLLCHI) === */
+/* ======================================================= */
+
+@media (max-width: 1100px) {
+  /* Journey Section */
+  .journey-content-wrapper {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .journey-title {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .journey-text-container {
+    width: 100%;
+    order: 2;
+  }
+  .journey-images-container {
+    width: 100%;
+    min-height: 450px;
+    order: 1;
+  }
+  .journey-image.img-1 {
+    width: 280px;
+    height: 280px;
+  }
+  .journey-image.img-2 {
+    width: 300px;
+    height: 300px;
+    top: 80px;
+  }
+  .journey-image.img-3 {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 900px) {
+  /* About Us Section (L'qdima) */
+  .about-us-container {
+    flex-direction: column;
+  }
+  .about-image-wrapper {
+    width: 100%;
+    border-radius: 0;
+  }
+  .main-text-column {
+    width: 90%;
+    margin-left: 0;
+    margin-top: -80px;
+  }
+  .about-us-title {
+    position: static;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .about-info-box {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Header */
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 30px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header-actions {
+    justify-content: flex-start;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  /* Footer */
+  .footer-column {
+    flex-basis: 45%;
+  }
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Journey Section */
+  .our-journey-section {
+    padding: 40px 20px;
+  }
+  .journey-images-container {
+    min-height: 350px;
+  }
+  .journey-image.img-1 {
+    width: 200px;
+    height: 200px;
+    left: 0;
+  }
+  .journey-image.img-2 {
+    width: 220px;
+    height: 220px;
+    top: 60px;
+    right: 0;
+  }
+  .journey-image.img-3 {
+    width: 180px;
+    height: 180px;
+    bottom: 0;
+    left: 10%;
+  }
+  .journey-text-box {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Footer */
+  .footer-main {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+  }
+}
