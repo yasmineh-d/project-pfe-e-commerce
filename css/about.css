@@ -58,7 +58,7 @@ body {
 .nav-menu ul {
   list-style: none;
   display: flex;
-  gap: 115px; /* MODIFIED: Consistent with original home.css */
+  gap: 115px;
 }
 
 .nav-menu ul li a {
@@ -131,61 +131,69 @@ body {
 }
 
 /* ======================================================= */
-/* === SECTION 1: ABOUT US (L'QDIMA) === */
+/* === SECTION 1: ABOUT US (TO MATCH LATEST IMAGE)    === */
 /* ======================================================= */
 .about-us-container {
-  display: flex;
-  align-items: center;
+  position: relative;
+  display: flex; /* Use flexbox for side-by-side columns */
+  /* Align items to the top of the flex container */
+  /* Or your desired max-width for the section */
   width: 100%;
-  padding: 0px 0;
-  overflow: hidden; /* bach maykherjch l'content 3la l'container */
 }
 
 .about-image-wrapper {
-  flex-basis: 60%;
-  border-radius: 0 25px 25px 0;
-  overflow: hidden;
-  z-index: 1;
+  flex: 0 0 700px; /* TUNE: Image takes 45% of the width. Adjust (e.g., 40% to 50%).
+                           The first '0' means it won't grow.              The second '0' means it won't shrink. */
+  border-radius: 0 35px 35px 0; /* Rounds ONLY top-right and bottom-right. TUNE '35px' for curve. */
+  overflow: hidden; /* Ensures image is clipped by the rounded corners. */
+  align-self: stretch; /* Makes image wrapper take full height of flex container if text column is taller */
+  height: 450px;
+  width: 900px;
+  margin-bottom: 150px;
 }
 
 .about-image-wrapper img {
+  display: block; /* Removes any extra space below the image */
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  height: 100%; /* Make image fill the height of its wrapper */
+  object-fit: cover; /* Ensures image covers the area, might crop */
 }
 
 .main-text-column {
-  flex-basis: 55%;
-  margin-left: -120px;
-  position: relative;
-  z-index: 2;
+  /* Takes up the remaining space in the flex container */
+  /* If you want the title's top to perfectly align with image top, this column might need slight
+     padding-top IF the title itself has default top margin from browser.
+     Typically, a heading (h2) might have some browser-default margin-top.
+     padding-top: 10px; /* Example, only if needed to align title visually */
 }
 
 .about-us-title {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  position: absolute;
-  top: -40px;
-  left: 240px;
-  z-index: 3;
+  font-size: 2.8rem; /* TUNE: Adjust font size (e.g., 2.8rem to 3.5rem) */
+  font-weight: 700; /* Bold */
+  color: #1a1a1a; /* Dark text color */
+  margin-top: 40px; /* TUNE: Adjust top margin to align with image top. Could be slightly positive or negative.
+                           Start with 0, or if image looks higher, maybe 10px. */
+  margin-bottom: 25px; /* TUNE: Space between the title and the gray info box below it */
+  line-height: 1.2;
+  margin-left: 75px;
 }
 
 .about-info-box {
-  background-color: #f0f0f0;
-  padding: 2rem;
-  border-radius: 25px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  margin-top: 50px;
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 30px 35px; /* TUNE: Internal padding of the box */
+  border-radius: 35px; /* TUNE: Roundness of ALL corners of the info box. (e.g. 20px to 30px) */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07); /* Subtle shadow */
+  margin-top: 40px;
+  width: 600px;
+  position: absolute;
+  left: 600px;
 }
 
 .about-info-box p {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1rem; /* TUNE: Text size inside info box */
+  line-height: 1.65;
   color: #333333;
-  margin-top: 0;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.15rem;
 }
 
 .about-info-box p:last-child {
@@ -206,16 +214,18 @@ body {
   font-weight: 700;
   color: #1a1a1a;
   margin-bottom: 40px;
+  margin-left: 150px;
 }
 
 .journey-content-wrapper {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 0px;
 }
 
 .journey-text-container {
   flex: 1 1 45%;
+  margin-left: 30px;
 }
 
 .journey-text-box {
@@ -258,9 +268,9 @@ body {
 }
 
 .journey-image.img-1 {
-  width: 350px;
-  height: 350px;
-  top: 0;
+  width: 380px;
+  height: 380px;
+  top: -120px;
   left: 5%;
   z-index: 3;
 }
@@ -269,15 +279,15 @@ body {
   width: 380px;
   height: 380px;
   top: 100px;
-  right: 0;
+  right: -34px;
   z-index: 2;
 }
 
 .journey-image.img-3 {
-  width: 320px;
-  height: 320px;
-  bottom: 0;
-  left: 20%;
+  width: 380px;
+  height: 380px;
+  bottom: -17px;
+  left: 0%;
   z-index: 1;
 }
 
@@ -341,39 +351,34 @@ body {
   text-decoration: underline;
 }
 
-/* ADDED: Styles for stacking contact icon links (WhatsApp, Gmail) */
 .footer-column .contact-icons a {
-  display: block; /* Makes each link take full width and stack vertically */
-  margin-bottom: 10px; /* Space between the links */
+  display: block;
+  margin-bottom: 10px;
 }
 .footer-column .contact-icons a:last-child {
-  margin-bottom: 0; /* Remove margin from the last icon if only two */
+  margin-bottom: 0;
 }
 
-/* MODIFIED: contact-icons img for hover effect and spacing handled by <a> */
 .contact-icons img {
   width: 36px;
   height: auto;
-  /* margin-bottom: 15px; -- REMOVED: Spacing is now on the <a> tag */
-  display: block; /* Ensures the image behaves as a block within its 'a' tag */
-  transition: transform 0.2s ease; /* For smooth scaling on hover */
+  display: block;
+  transition: transform 0.2s ease;
 }
 
-/* ADDED: Hover effect for contact icons */
 .footer-column .contact-icons a:hover img {
-  transform: scale(1.15); /* Make icon bigger on hover */
+  transform: scale(1.15);
 }
 
-/* MODIFIED: social-icons .social-icon for vertical stacking and hover */
 .social-icons .social-icon {
-  display: flex; /* MODIFIED: from inline-flex. Makes it block-level but keeps flex properties for centering icon */
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 36px;
   height: 36px;
   border-radius: 6px;
-  margin-right: 0; /* MODIFIED: Removed right margin as they are stacked */
-  margin-bottom: 10px; /* MODIFIED: Adjusted for vertical spacing */
+  margin-right: 0;
+  margin-bottom: 10px;
   color: #fff;
   font-size: 1.1rem;
   text-decoration: none;
@@ -381,7 +386,7 @@ body {
 }
 
 .social-icons .social-icon:hover {
-  transform: scale(1.1); /* Existing hover effect preserved */
+  transform: scale(1.1);
 }
 
 .facebook-bg {
@@ -442,6 +447,7 @@ body {
   .journey-text-container {
     width: 100%;
     order: 2;
+    margin-left: 0;
   }
   .journey-images-container {
     width: 100%;
@@ -449,8 +455,8 @@ body {
     order: 1;
   }
   .journey-image.img-1 {
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 300px;
   }
   .journey-image.img-2 {
     width: 300px;
@@ -458,33 +464,41 @@ body {
     top: 80px;
   }
   .journey-image.img-3 {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
   }
 }
 
 @media (max-width: 900px) {
-  /* About Us Section (L'qdima) */
+  /* MODIFICATIONS POUR SECTION 1 (ABOUT US) F LES ECRANS SGHAR */
   .about-us-container {
     flex-direction: column;
+    padding: 40px 20px;
+    max-width: 100%; /* Bach takhod l3erd kamel dyal l'ecran sghir */
+    margin: 40px auto; /* Nqess chwiya mn l'espace lfoq w lte7t */
   }
   .about-image-wrapper {
     width: 100%;
-    border-radius: 0;
+    flex-basis: auto;
+    border-radius: 25px; /* Tdwira l jwanb kamlin bach tji mzyana mli tkoun bo7dha lfoq */
+    max-height: 300px;
+    margin-bottom: 0; /* Kan7eydo l'espace bin tswira w lktaba hit lktaba atji foqha */
   }
   .main-text-column {
-    width: 90%;
-    margin-left: 0;
-    margin-top: -80px;
+    width: 90%; /* Nsghroha chwiya bach matlsse9ch f jnab */
+    margin: -60px auto 0 auto; /* MODIFIÉ: margin-left w right auto bach tji f lwest, w margin-top negatif bach tji foq tswira */
+    flex-basis: auto;
   }
   .about-us-title {
-    position: static;
+    position: static; /* Mayبقاش absolute bach yji f lflux normal */
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 20px;
+    left: auto; /* Kan7eydo left */
   }
   .about-info-box {
-    margin-top: 0;
+    margin-top: 0; /* Kan7eydo l margin-top hit l title wella static */
+    padding: 1.5rem;
   }
 }
 
@@ -521,6 +535,18 @@ body {
     justify-content: center;
     text-align: center;
   }
+
+  /* Section 1 (About Us) pour écrans plus petits encore */
+  .about-image-wrapper {
+    max-height: 250px;
+  }
+  .about-us-title {
+    font-size: 2.2rem;
+  }
+  .main-text-column {
+    width: 95%; /* Nzid nqrbha l jnab chwiya */
+    margin-top: -50px; /* Nqel mn l'overlap */
+  }
 }
 
 @media (max-width: 600px) {
@@ -532,9 +558,10 @@ body {
     min-height: 350px;
   }
   .journey-image.img-1 {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     left: 0;
+    top: -60px;
   }
   .journey-image.img-2 {
     width: 220px;
@@ -543,13 +570,24 @@ body {
     right: 0;
   }
   .journey-image.img-3 {
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
     bottom: 0;
     left: 10%;
   }
   .journey-text-box {
     padding: 25px;
+  }
+
+  /* MODIFICATIONS POUR SECTION 1 (ABOUT US) F LES ECRANS BZAFF SGHAR */
+  .about-us-title {
+    font-size: 2rem;
+  }
+  .about-info-box {
+    padding: 1rem;
+  }
+  .main-text-column {
+    margin-top: -40px; /* Nzid nqel mn l'overlap */
   }
 }
 
