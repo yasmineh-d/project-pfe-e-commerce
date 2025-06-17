@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-ARABE" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us - Homelectroique</title>
-
-    <!-- === LIENS CSS === -->
+    <title>Create Account - Electronique House</title>
+    <link rel="stylesheet" href="css/sign_up.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/about.css" />
   </head>
   <body>
     <!-- ======================================================= -->
@@ -33,7 +31,8 @@
               <li>
                 <a href="index.html">Home <i class="fas fa-angle-down"></i></a>
               </li>
-              <li><a href="about.html" class="active">About</a></li>
+              <!-- === TA3DIL HNA: 7YEDNA CLASS "active" MN ABOUT === -->
+              <li><a href="about.html">About</a></li>
               <li>
                 <a href="products.html"
                   >Categories <i class="fas fa-angle-down"></i
@@ -51,8 +50,7 @@
               ><div class="icon-circle"><i class="far fa-heart"></i></div
             ></a>
             <a href="#"
-              ><div class="icon-circle">
-                <i class="fas fa-shopping-bag"></i></div
+              ><div class="icon-circle"><i class="fas fa-shopping-bag"></i></div
             ></a>
             <a href="login.html" class="signin-btn">Sign-in</a>
           </div>
@@ -61,82 +59,45 @@
     </header>
 
     <!-- ======================================================= -->
-    <!--          SECTION 1: ABOUT US                  -->
+    <!--          CONTAINER LKBIR LI JAME3 KOULCHI (Auth)      -->
     <!-- ======================================================= -->
-    <section class="about-us-container">
-      <div class="about-image-wrapper">
-        <img src="images/machine coffe.png" alt="Machine à expresso." />
+    <div class="auth-container">
+      <!-- ======================================================= -->
+      <!--          LJIHA LISSRYA: FORM DYAL CREATE ACCOUNT      -->
+      <!-- ======================================================= -->
+      <div class="form-section">
+        <h1>Create Account</h1>
+        <form action="#">
+          <div class="input-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" required />
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="input-group">
+            <label for="number">Number</label>
+            <input type="tel" id="number" name="number" required />
+          </div>
+          <div class="input-group">
+            <label for="passeword">Passeword</label>
+            <input type="password" id="passeword" name="passeword" required />
+          </div>
+          <!-- Bouton Sign Up ghadi ywelli orange mn CSS -->
+          <button type="submit" class="btn btn-signup">Sign Up</button>
+        </form>
       </div>
-      <div class="main-text-column">
-        <h2 class="about-us-title">About Us</h2>
-        <div class="about-info-box">
-          <p>
-            At House-electronic, we believe that your home should be a place of
-            comfort, efficiency, and innovation. That's why we handpick the best
-            household appliances for you, combining high performance, modern
-            design, and smart technology.
-          </p>
-          <p>
-            Since our launch, our mission has been simple: to make your daily
-            life easier with reliable, affordable, and durable products. From
-            the kitchen to the living room, the laundry room to the bedroom, we
-            provide solutions tailored to every part of your home.
-          </p>
-          <p>
-            We are proud to offer responsive customer service, fast and free
-            delivery on orders over €40, and hassle-free returns within 60 days.
-            Join our community and enjoy exclusive offers by becoming a member
-            for free.
-          </p>
-          <p>
-            House-electronic your partner for a connected, practical, and
-            stylish home.
-          </p>
-        </div>
-      </div>
-    </section>
 
-    <!-- ======================================================= -->
-    <!--         SECTION 2: OUR JOURNEY                  -->
-    <!-- ======================================================= -->
-    <section class="our-journey-section">
-      <h1 class="journey-title">Our Journey</h1>
-      <div class="journey-content-wrapper">
-        <div class="journey-text-container">
-          <div class="journey-text-box">
-            <p>
-              The House-electronic journey began in 2019 with a simple yet
-              ambitious idea: to revolutionize home equipment by combining
-              technology, comfort, and affordability. In a constantly evolving
-              market, we set out to offer a modern alternative for households
-              seeking reliable, high-performance, and stylish products.
-            </p>
-            <p>
-              What started out as a small project quickly grew into a go-to
-              platform for home technology enthusiasts. In just a few years, we
-              expanded our catalog to meet the needs of every room in the house
-              — from small appliances to the most innovative smart devices.
-            </p>
-            <p>
-              Today, House-electronic stands out as a trusted player in the
-              industry, thanks to the dedication of our team, the loyalty of our
-              customers, and our constant drive to innovate.
-            </p>
-          </div>
-        </div>
-        <div class="journey-images-container">
-          <div class="journey-image img-1">
-            <img src="images/gatering.jpg" alt="Business meeting" />
-          </div>
-          <div class="journey-image img-2">
-            <img src="images/stock.jpg" alt="Appliance store" />
-          </div>
-          <div class="journey-image img-3">
-            <img src="images/backage_de_stock.jpg" alt="Warehouse" />
-          </div>
-        </div>
+      <!-- ======================================================= -->
+      <!--          LJIHA LIMNYA: MESSAGE D'ACCUEIL W SIGN IN    -->
+      <!-- ======================================================= -->
+      <div class="info-section">
+        <h2>WELLCOME TO<br />ELECTRONIQUE<br />HOUSE</h2>
+        <p>New Here ?</p>
+        <button class="btn btn-signin">Sign In</button>
       </div>
-    </section>
+    </div>
 
     <!-- ======================================================= -->
     <!--                         FOOTER                          -->
@@ -144,7 +105,7 @@
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-main">
-          <!-- Column 1: Get Help -->
+          <!-- Columns dyal footer (bla taghyir) -->
           <div class="footer-column">
             <h4>Get Help</h4>
             <ul>
@@ -155,8 +116,6 @@
               <li><a href="#">Report Abuse</a></li>
             </ul>
           </div>
-
-          <!-- Column 2: Catégorie -->
           <div class="footer-column">
             <h4>Catégorie</h4>
             <ul>
@@ -166,8 +125,6 @@
               <li><a href="#">Heating and Air Conditioning</a></li>
             </ul>
           </div>
-
-          <!-- Column 3: Payments -->
           <div class="footer-column">
             <h4>Payments and Protections</h4>
             <ul>
@@ -180,8 +137,6 @@
               </li>
             </ul>
           </div>
-
-          <!-- Column 4: About -->
           <div class="footer-column">
             <h4>About the Company</h4>
             <ul>
@@ -189,8 +144,6 @@
               <li><a href="#">Social Responsibility</a></li>
             </ul>
           </div>
-
-          <!-- Column 5: Contact -->
           <div class="footer-column">
             <h4>Contact</h4>
             <div class="contact-icons">
@@ -202,8 +155,6 @@
               /></a>
             </div>
           </div>
-
-          <!-- Column 6: Follow Us -->
           <div class="footer-column">
             <h4>Follow Us</h4>
             <div class="social-icons">
@@ -222,9 +173,7 @@
             </div>
           </div>
         </div>
-
         <hr class="footer-divider" />
-
         <div class="footer-bottom">
           <p class="copyright-text">
             © 2025 House Electronics. All Rights Reserved

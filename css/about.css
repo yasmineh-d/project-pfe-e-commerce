@@ -159,14 +159,6 @@ body {
   object-fit: cover; /* Ensures image covers the area, might crop */
 }
 
-.main-text-column {
-  /* Takes up the remaining space in the flex container */
-  /* If you want the title's top to perfectly align with image top, this column might need slight
-     padding-top IF the title itself has default top margin from browser.
-     Typically, a heading (h2) might have some browser-default margin-top.
-     padding-top: 10px; /* Example, only if needed to align title visually */
-}
-
 .about-us-title {
   font-size: 2.8rem; /* TUNE: Adjust font size (e.g., 2.8rem to 3.5rem) */
   font-weight: 700; /* Bold */
