@@ -385,6 +385,8 @@ body {
   z-index: -1; /* Behind form-section and info-section */
   filter: blur(3px);
   transform: scale(1.05); /* Ensure blur covers edges */
+  -webkit-filter: opacity(70%); /* Safari 6.0 - 9.0 */
+  filter: opacity(70%);
 }
 
 .form-section {
