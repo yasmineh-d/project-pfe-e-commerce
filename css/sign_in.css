@@ -368,7 +368,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px; /* Add some padding around the auth boxes */
+  padding: 34px 20px; /* Add some padding around the auth boxes */
   position: relative;
   width: 100%;
   overflow: hidden; /* Important to contain the ::before pseudo-element */
@@ -382,6 +382,7 @@ body {
   right: 0;
   bottom: 0;
   background: url("../images/singn.jpg") center/cover no-repeat;
+
   z-index: -1; /* Behind form-section and info-section */
   filter: blur(3px);
   transform: scale(1.05); /* Ensure blur covers edges */
@@ -390,16 +391,21 @@ body {
 }
 
 .form-section {
-  background: hsla(0, 0%, 100%, 0.913); /* Slightly more opaque for readability */
-  padding: 40px 30px;
+  background: hsla(
+    0,
+    0%,
+    100%,
+    0.913
+  ); /* Slightly more opaque for readability */
+  padding: 50px 40px;
   border-radius: 15px;
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
   box-shadow: 0 15px 30px rgba(255, 255, 255, 0.25);
   z-index: 2;
   position: relative;
   margin-right: 20px;
-  margin-left: 20px; /* Added for balance on larger screens / centering when stacked */
+  margin-left: 35px; /* Added for balance on larger screens / centering when stacked */
 }
 
 .form-section h1 {
@@ -492,7 +498,9 @@ body {
 .info-section p {
   font-size: 17px;
   margin-bottom: 25px;
-  opacity: 0.9;
+  opacity: 1; /* Sla7tha, opacity khass tkoun bin 0 o 1 */
+  color: white; /* Zedt hadi bach lktaba tkoun bayda */
+  font-weight: bold; /* Zedt hadi bach lktaba tkoun ghlita (bold) */
 }
 
 .btn-signin {
