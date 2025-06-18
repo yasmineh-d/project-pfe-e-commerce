@@ -47,9 +47,6 @@ body {
 /* ========================
    LOGO
 ======================== */
-.logo {
-  /* Containing block for the image, helps with precise positioning if needed */
-}
 .logo img {
   max-height: 57px; /* Original height */
   margin-left: 9px; /* Spacing from the edge */
@@ -291,12 +288,6 @@ body {
   text-decoration: none;
   transition: transform 0.2s ease;
 }
-
-/* Ensure last icon in a row doesn't have margin if that's preferred */
-.social-icons .social-icon:last-child {
-  /* margin-right: 0; */ /* Only if you want no margin on the very last one */
-}
-
 .social-icons .social-icon:hover {
   transform: scale(1.1);
 }
