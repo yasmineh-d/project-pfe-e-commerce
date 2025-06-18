@@ -85,7 +85,7 @@
         <div class="container">
           <h2 class="section-title">Featured Categories</h2>
           <div class="categories-grid">
-            <a href="home.html" class="category-item">
+            <a href="categories.html" class="category-item">
               <div class="category-image-wrapper">
                 <img
                   src="images/Small Appliances.jpeg"
@@ -96,7 +96,7 @@
               <p class="category-name">Small Appliances</p>
             </a>
 
-            <a href="home.html" class="category-item">
+            <a href="categories.html" class="category-item">
               <div class="category-image-wrapper">
                 <img
                   src="images/Kitchen_Appliances .png"
@@ -107,7 +107,7 @@
               <p class="category-name">Kitchen Appliances</p>
             </a>
 
-            <a href="home.html" class="category-item">
+            <a href="categories.html" class="category-item">
               <div class="category-image-wrapper">
                 <img
                   src="images/laundry_Appliances.png"
@@ -118,7 +118,7 @@
               <p class="category-name">Laundry Appliances</p>
             </a>
 
-            <a href="home.html" class="category-item">
+            <a href="categories.html" class="category-item">
               <div class="category-image-wrapper">
                 <img
                   src="images/Heating_&_Air Conditioning.png"
@@ -148,7 +148,10 @@
               <!-- Product Card 1: Vacuum Cleaner -->
               <div class="product-card">
                 <div class="product-image-container">
-                  <img src="images/like.png" alt="Vacuum Cleaner NEXO" />
+                  <img
+                    src="images/Vacuum_cleaners.png"
+                    alt="Vacuum Cleaner NEXO"
+                  />
                 </div>
                 <h3 class="product-name">Vacuum_cleaners</h3>
                 <p class="product-price-sale">MAD 900.00</p>
@@ -166,7 +169,7 @@
               <!-- Product Card 2: Toaster -->
               <div class="product-card">
                 <div class="product-image-container">
-                  <img src="images/setting1.png" alt="Toaster" />
+                  <img src="images/Toaster.png" alt="Toaster" />
                 </div>
                 <h3 class="product-name">Toaster</h3>
                 <p class="product-price-sale">MAD 700.00</p>
@@ -184,7 +187,7 @@
               <!-- Product Card 3: Vacum -->
               <div class="product-card">
                 <div class="product-image-container">
-                  <img src="images/photo_girl.jpg" alt="Vacum Cleaner" />
+                  <img src="images/vacum.png" alt="Vacum" />
                 </div>
                 <h3 class="product-name">Vacum</h3>
                 <p class="product-price-sale">MAD 1,380.00</p>
@@ -202,7 +205,7 @@
               <!-- Product Card 4: Vapeurcro (Iron) -->
               <div class="product-card">
                 <div class="product-image-container">
-                  <img src="images/photo_girl.jpg"" alt="Vapeurcro Iron" />
+                  <img src="images/vapeurcro.png"" alt="Vapeurcro Iron" />
                 </div>
                 <h3 class="product-name">Vapeurcro</h3>
                 <p class="product-price-sale">MAD 500.00</p>
@@ -241,12 +244,12 @@
               <!-- Card 1: Thermomix -->
               <div class="best-picks-card">
                 <div class="best-picks-img-container">
-                  <img src="images/photo_girl.jpg" alt="Thermomix TM6" />
+                  <img src="images/Thermomix TM6.png" alt="Thermomix TM6" />
                 </div>
                 <h3 class="best-picks-name">Thermomix TM6</h3>
                 <div class="best-picks-footer">
                   <span class="best-picks-price">MAD 11,380.00</span>
-                  <a href="home.html" class="best-picks-add-icon"
+                  <a href="categories.html" class="best-picks-add-icon"
                     ><i class="fas fa-shopping-bag"></i
                   ></a>
                 </div>
@@ -255,12 +258,12 @@
               <!-- Card 2: Stand Mixer -->
               <div class="best-picks-card">
                 <div class="best-picks-img-container">
-                  <img src="images/photo_girl.jpg" alt="Stand Mixer" />
+                  <img src="images/Stand Mixer.png" alt="Stand Mixer" />
                 </div>
                 <h3 class="best-picks-name">Stand Mixer</h3>
                 <div class="best-picks-footer">
                   <span class="best-picks-price">MAD 500.00</span>
-                  <a href="home.html" class="best-picks-add-icon"
+                  <a href="categories.html" class="best-picks-add-icon"
                     ><i class="fas fa-shopping-bag"></i
                   ></a>
                 </div>
@@ -269,12 +272,12 @@
               <!-- Card 3: Hair Dryer -->
               <div class="best-picks-card">
                 <div class="best-picks-img-container">
-                  <img src="images/photo_girl.jpg" alt="Hair Dryer" />
+                  <img src="images/Hair Dryer .png" alt="Hair Dryer" />
                 </div>
                 <h3 class="best-picks-name">Hair Dryer</h3>
                 <div class="best-picks-footer">
                   <span class="best-picks-price">MAD 7,000.00</span>
-                  <a href="home.html" class="best-picks-add-icon"
+                  <a href="categories.html" class="best-picks-add-icon"
                     ><i class="fas fa-shopping-bag"></i
                   ></a>
                 </div>
@@ -283,7 +286,7 @@
               <!-- Card 4: Electric Kettle -->
               <div class="best-picks-card">
                 <div class="best-picks-img-container">
-                  <img src="images/photo_girl.jpg" alt="Electric Kettle" />
+                  <img src="images/Electric Kettle.png" alt="Electric Kettle" />
                 </div>
                 <h3 class="best-picks-name">Electric Kettle</h3>
                 <div class="best-picks-footer">
@@ -373,7 +376,7 @@
         <div class="promo-image">
           <!-- IMPORTANT: Replace 'images/promo_appliances.png' with the correct path to your image -->
           <img
-            src="images/mix_productt.png"
+            src="images/photo2.png"
             alt="Kitchen Appliances Collection"
           />
         </div>

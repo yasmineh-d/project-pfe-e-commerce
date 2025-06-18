@@ -1,0 +1,139 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5; /* Light grey background for the page */
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align to top if content is long */
+  min-height: 100vh;
+}
+
+.categories-container {
+  background-color: #f8f9fa; /* Slightly off-white for the main container */
+  padding: 25px;
+  border-radius: 16px; /* Rounded corners for the container */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow for the container */
+  width: 100%;
+  max-width: 900px; /* Max width for the container */
+}
+
+.categories-header h2 {
+  font-size: 24px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.categories-header p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: flex-end; /* Align filter items to the right */
+  gap: 15px; /* Space between filter items */
+  margin-bottom: 25px;
+}
+
+.filter-item {
+  background-color: #e9ecef; /* Light grey for filter backgrounds */
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #495057;
+  min-width: 150px; /* Minimum width for filter items */
+}
+
+.filter-item input[type="text"] {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  flex-grow: 1;
+}
+
+.filter-item i {
+  margin-left: 8px; /* Space icon from text/input */
+  color: #6c757d; /* Icon color */
+}
+
+.filter-item.dropdown span {
+  flex-grow: 1; /* Make text take available space */
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px; /* Space between product cards */
+}
+
+.product-card {
+  background-color: #ffffff; /* White background for cards */
+  border-radius: 12px; /* Rounded corners for cards */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); /* Subtle shadow for cards */
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes button to bottom */
+}
+
+.product-card img {
+  max-width: 80%; /* Adjust as needed */
+  height: 150px; /* Fixed height for consistency */
+  object-fit: contain; /* Scales image nicely within bounds */
+  margin: 0 auto 15px auto; /* Center image and add bottom margin */
+  border-radius: 8px; /* Optional: rounded corners for image */
+}
+
+.product-card h3 {
+  font-size: 16px;
+  color: #333;
+  margin: 0 0 5px 0;
+  font-weight: 600;
+}
+
+.product-card .price {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.product-card .rating {
+  color: #f8b400; /* Yellow for stars */
+  margin-bottom: 15px;
+  font-size: 16px; /* Star size */
+}
+
+.product-card .buy-button {
+  background-color: #3b82f6; /* Blue button */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%; /* Make button take full width of its container */
+  margin-top: auto; /* Pushes button to bottom if card content varies */
+}
+
+.product-card .buy-button:hover {
+  background-color: #2563eb; /* Darker blue on hover */
+}
+
+.no-products {
+  grid-column: 1 / -1; /* Make it span all columns */
+  text-align: center;
+  color: #777;
+  font-size: 18px;
+  padding: 20px;
+}

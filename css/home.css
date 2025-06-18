@@ -817,10 +817,9 @@
   background-color: #fff;
   font-family: Arial, sans-serif;
   align-items: stretch;
-  max-width: 1140px;
+  width: 100%;
   border-radius: 8px;
-  overflow: hidden;
-  margin: 20px auto; /* ADDED: To center it on the page if it's not full width */
+  overflow: hidden; /* ADDED: To center it on the page if it's not full width */
 }
 
 .promo-content {
@@ -830,11 +829,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
   text-align: center;
+  width: 60%;
 }
 
 .promo-image {
+  width: 40%;
   flex: 1; /* Take up the other half */
   display: flex;
   justify-content: center;
