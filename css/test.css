@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Added basic body font for better presentation */
+  font-family: Arial, sans-serif;
+}
+
+/* ========================
+   TOP BAR (Blue strip)
+======================== */
+.top-bar {
+  background-color: #3771c8;
+  color: #fcd34d;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 8px 0;
+}
+
+/* ========================
+   MAIN HEADER AREA
+======================== */
+.main-header {
+  background-color: #3771c8;
+  padding: 0 20px;
+  display: flex;
+  align-items: flex-start; /* Changed from center to flex-start for logo alignment */
+  gap: 1px; /* Reduced gap for closer alignment if needed */
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.header-content {
+  background-color: #ffffff;
+  border-radius: 30px 0px 0px 0px;
+  padding: 12px 30px; /* Reduced vertical padding slightly */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-left: 20px; /* Space between logo and content area */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05); /* Soft shadow */
+}
+
+/* ========================
+   LOGO
+======================== */
+.logo {
+  /* Containing block for the image, helps with precise positioning if needed */
+}
+.logo img {
+  max-height: 57px; /* Original height */
+  margin-left: 9px; /* Spacing from the edge */
+  margin-top: -15px; /* Adjust to align with the white header content visually */
+  position: relative; /* Allows z-index if ever needed over other elements */
+  /* display: block; */ /* Ensures no extra space below image */
+}
+
+/* ========================
+   NAVIGATION
+======================== */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 115px; /* Adjust gap as needed for your desired spacing */
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 13px; /* Space between text and icon */
+  position: relative; /* For the active indicator */
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li a.active {
+  color: #1e90ff; /* Example hover/active color */
+}
+
+/* Optional: Active link indicator */
+.nav-menu ul li a.active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #000; /* Color of the underline */
+  position: absolute;
+  bottom: -5px; /* Position below the text */
+  left: 0;
+}
+
+/* ========================
+   ICON BUTTONS (Search, Heart, Bag)
+======================== */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 45px; /* Spacing between icons and sign-in button */
+}
+
+.icon-circle {
+  background-color: #f1f3f6; /* Light grey background for icons */
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.icon-circle i {
+  font-size: 1rem; /* Adjust icon size if needed */
+  color: #000;
+}
+
+.icon-circle:hover {
+  background-color: #e0e7ff; /* Slightly darker on hover */
+}
+
+/* ========================
+   SIGN-IN BUTTON
+======================== */
+.signin-btn {
+  padding: 6px 16px;
+  border: 1px solid #3771c8;
+  color: #3771c8;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.signin-btn:hover {
+  background-color: #ffdd55; /* Yellow accent on hover */
+  color: #3771c8; /* Keep text color or change as desired */
+  /* border-color: #ffdd55; */ /* Optional: change border color on hover */
+}
+
+/* ========================
+   RESPONSIVE DESIGN (HEADER)
+======================== */
+@media (max-width: 992px) {
+  /* Adjust breakpoint as needed */
+  .nav-menu ul {
+    gap: 40px; /* Reduce gap for medium screens */
+  }
+  .header-actions {
+    gap: 20px; /* Reduce gap for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start; /* Align logo to the start */
+  }
+
+  .logo img {
+    margin-top: 5px; /* Reset top margin for stacked layout */
+    margin-bottom: 10px; /* Add some space below logo */
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start; /* Align nav and actions to the start */
+    gap: 15px;
+    padding: 20px;
+    border-radius: 30px; /* Or adjust to fit the new layout */
+    margin-left: 0; /* Remove margin when stacked */
+    width: 100%; /* Make header content take full width */
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 10px; /* Adjust gap for vertical nav */
+    width: 100%; /* Make nav take full width */
+  }
+  .nav-menu ul li a {
+    justify-content: flex-start; /* Align nav items text to left */
+  }
+
+  .header-actions {
+    flex-direction: row; /* Keep actions in a row */
+    justify-content: flex-start; /* Align actions to the start */
+    width: 100%;
+    gap: 10px; /* Adjust gap for smaller screens */
+    flex-wrap: wrap; /* Allow actions to wrap if they don't fit */
+  }
+}
+
+/* ========================
+   SITE FOOTER SECTION
+======================== */
+.site-footer {
+  background-color: #3771c8; /* Main blue from header */
+  color: #ffffff;
+  padding: 60px 0 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 160px; /* Prevent columns from getting too narrow */
+}
+
+.footer-column h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a,
+.footer-legal-links a {
+  color: #d1d5db; /* A slightly off-white for links */
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover,
+.footer-legal-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Styles for stacking contact icon links (WhatsApp, Gmail) */
+.footer-column .contact-icons a {
+  display: block; /* Makes each link take full width and stack vertically */
+  margin-bottom: 10px; /* Space between the links */
+}
+.footer-column .contact-icons a:last-child {
+  margin-bottom: 0; /* Remove margin from the last icon if only two */
+}
+
+.contact-icons img {
+  width: 36px;
+  height: auto;
+  display: block; /* Ensures the image behaves as a block within its 'a' tag */
+  transition: transform 0.2s ease; /* For smooth scaling on hover */
+}
+
+.footer-column .contact-icons a:hover img {
+  transform: scale(1.15); /* Make icon bigger on hover */
+}
+
+/* Social icons */
+.social-icons .social-icon {
+  display: flex; /* Keeps icons in a row if space allows or stacks with flex-wrap */
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  margin-right: 8px; /* Space between horizontal icons */
+  margin-bottom: 8px; /* Space for wrapping */
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+/* Ensure last icon in a row doesn't have margin if that's preferred */
+.social-icons .social-icon:last-child {
+  /* margin-right: 0; */ /* Only if you want no margin on the very last one */
+}
+
+.social-icons .social-icon:hover {
+  transform: scale(1.1);
+}
+
+.facebook-bg {
+  background-color: #1877f2;
+}
+.twitter-bg {
+  background-color: #1da1f2;
+}
+.linkedin-bg {
+  background-color: #0a66c2;
+}
+.instagram-bg {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+.footer-divider {
+  border: none;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 0 20px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 0.85rem;
+  color: #d1d5db;
+}
+
+.footer-legal-links span {
+  margin: 0 10px;
+}
+
+/* Responsive adjustments for Footer */
+@media (max-width: 992px) {
+  .footer-column {
+    flex-basis: calc(33.333% - 20px); /* Adjust for 3 columns with gap */
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-main {
+    gap: 20px; /* Reduce gap between columns */
+  }
+  .footer-column {
+    flex-basis: calc(50% - 10px); /* Adjust for 2 columns with gap */
+    min-width: 150px;
+  }
+  .footer-column h4 {
+    font-size: 0.95rem; /* Slightly smaller heading */
+  }
+  .footer-bottom {
+    flex-direction: column; /* Stack bottom items */
+    text-align: center;
+    gap: 10px;
+  }
+  .footer-legal-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-main {
+    flex-direction: column; /* Stack all columns */
+    align-items: flex-start; /* Align columns to the start */
+    gap: 30px;
+  }
+  .footer-column {
+    flex-basis: 100%; /* Each column takes full width */
+    min-width: unset;
+  }
+  .footer-column h4 {
+    margin-bottom: 15px;
+  }
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  /* For contact and social icons on smallest screens, ensure they are visible */
+  .footer-column .contact-icons,
+  .footer-column .social-icons {
+    display: flex; /* Or inline-flex if you prefer them side-by-side if space */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 10px; /* Space between icons */
+  }
+  .footer-column .contact-icons a,
+  .footer-column .social-icons .social-icon {
+    margin-bottom: 0; /* Reset bottom margin since gap handles spacing */
+  }
+}

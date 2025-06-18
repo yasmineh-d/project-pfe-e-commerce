@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-ARABE" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create Account - Electronique House.</title>
-    <link rel="stylesheet" href="css/sign_up.css" />
+    <title>Create Account - Electronique House</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="css/sign_up.css" />
+    <!-- Ensure 'combined_style.css' is the correct path to your CSS file -->
   </head>
   <body>
-    <!-- ======================================================= -->
-    <!--                        HEADER                           -->
-    <!-- ======================================================= -->
+    <!-- Header Section Start (from e-commerce page) -->
     <header class="site-header">
       <div class="top-bar">
         <p>FREE SHIPPING FOR ORDERS OVER 40 €. FREE RETURNS OVER 60 DAYS.</p>
@@ -22,6 +21,7 @@
       <div class="main-header">
         <div class="logo">
           <a href="index.html">
+            <!-- Make sure image path is correct -->
             <img src="images/logo_Y.png" alt="House Electronics Logo" />
           </a>
         </div>
@@ -31,7 +31,6 @@
               <li>
                 <a href="index.html">Home <i class="fas fa-angle-down"></i></a>
               </li>
-              <!-- === TA3DIL HNA: 7YEDNA CLASS "active" MN ABOUT === -->
               <li><a href="about.html">About</a></li>
               <li>
                 <a href="products.html"
@@ -47,16 +46,19 @@
               ><div class="icon-circle"><i class="fas fa-search"></i></div
             ></a>
             <a href="#"
-              ><div class="icon-circle"><i class="far fa-heart"></i></div
+              ><div class="icon-circle">
+                <i class="far fa-heart"></i></div
             ></a>
             <a href="#"
-              ><div class="icon-circle"><i class="fas fa-shopping-bag"></i></div
+              ><div class="icon-circle">
+                <i class="fas fa-shopping-bag"></i></div
             ></a>
             <a href="login.html" class="signin-btn">Sign-in</a>
           </div>
         </div>
       </div>
     </header>
+    <!-- Header Section End -->
 
     <!-- ======================================================= -->
     <!--          CONTAINER LKBIR LI JAME3 KOULCHI (Auth)      -->
@@ -81,7 +83,8 @@
             <input type="tel" id="number" name="number" required />
           </div>
           <div class="input-group">
-            <label for="passeword">Passeword</label>
+            <label for="passeword">Password</label>
+            <!-- Corrected typo -->
             <input type="password" id="passeword" name="passeword" required />
           </div>
           <!-- Bouton Sign Up ghadi ywelli orange mn CSS -->
@@ -93,19 +96,26 @@
       <!--          LJIHA LIMNYA: MESSAGE D'ACCUEIL W SIGN IN    -->
       <!-- ======================================================= -->
       <div class="info-section">
-        <h2>WELLCOME TO<br />ELECTRONIQUE<br />HOUSE</h2>
-        <p>New Here ?</p>
-        <button class="btn btn-signin">Sign In</button>
+        <h2>WELCOME TO<br />ELECTRONIQUE<br />HOUSE</h2>
+        <!-- Corrected typo -->
+        <p>Already have an account?</p>
+        <!-- Changed text for context -->
+        <!-- This button should ideally link to your login page -->
+        <button
+          onclick="window.location.href='login.html'"
+          class="btn btn-signin"
+        >
+          Sign In
+        </button>
       </div>
     </div>
+    <!-- Auth Container End -->
 
-    <!-- ======================================================= -->
-    <!--                         FOOTER                          -->
-    <!-- ======================================================= -->
+    <!-- Footer Section Start (from e-commerce page) -->
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-main">
-          <!-- Columns dyal footer (bla taghyir) -->
+          <!-- Column 1: Get Help -->
           <div class="footer-column">
             <h4>Get Help</h4>
             <ul>
@@ -116,6 +126,8 @@
               <li><a href="#">Report Abuse</a></li>
             </ul>
           </div>
+
+          <!-- Column 2: Catégorie -->
           <div class="footer-column">
             <h4>Catégorie</h4>
             <ul>
@@ -125,6 +137,8 @@
               <li><a href="#">Heating and Air Conditioning</a></li>
             </ul>
           </div>
+
+          <!-- Column 3: Payments -->
           <div class="footer-column">
             <h4>Payments and Protections</h4>
             <ul>
@@ -137,6 +151,8 @@
               </li>
             </ul>
           </div>
+
+          <!-- Column 4: About -->
           <div class="footer-column">
             <h4>About the Company</h4>
             <ul>
@@ -144,9 +160,12 @@
               <li><a href="#">Social Responsibility</a></li>
             </ul>
           </div>
+
+          <!-- Column 5: Contact -->
           <div class="footer-column">
             <h4>Contact</h4>
             <div class="contact-icons">
+              <!-- Make sure image paths are correct -->
               <a href="#"
                 ><img src="images/whatsapp-svgrepo-com.svg" alt="WhatsApp"
               /></a>
@@ -155,6 +174,8 @@
               /></a>
             </div>
           </div>
+
+          <!-- Column 6: Follow Us -->
           <div class="footer-column">
             <h4>Follow Us</h4>
             <div class="social-icons">
@@ -173,7 +194,9 @@
             </div>
           </div>
         </div>
+
         <hr class="footer-divider" />
+
         <div class="footer-bottom">
           <p class="copyright-text">
             © 2025 House Electronics. All Rights Reserved
@@ -186,5 +209,6 @@
         </div>
       </div>
     </footer>
+    <!-- Footer Section End -->
   </body>
 </html>
